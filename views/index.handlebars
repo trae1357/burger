@@ -1,26 +1,53 @@
+
+
 <div class="container"></div>
 <div class="row">
-    <div class="col-sm-4">
+    {{!-- <div class="col-sm-4">
       <ul>
           {{#each burgers}}
                {{#unless devoured}}
              <li> {{burger_name}} <button>Devoured! </button>   </li>
+             
                {{/unless}}
           {{/each}}
       </ul>
 
-    </div>
+    </div> --}}
+    
     <div class="col-sm-4"></div>
     <div class="col-sm-4">
 
         <ul>
           {{#each burgers}}
+               {{#unless devoured}}
+             <li> {{burger_name}} <button>Devoured! </button>   </li>
+             
+               {{/unless}}
+          {{/each}}
+          {{#each burgers}}
                {{#if devoured}}
-             <li> {{burger_name}}    </li>
+             <li> {{burger_name}}<button>Devoured!</button></li>
                {{/if}}
           {{/each}}
       </ul>
+      <p>{{Devour?}}</p>
 
     </div>
 </div>
 
+<h2>Devour a burger!</h2>
+<form id="create-form">
+
+  <div class="form-group">
+    <label for="daburger">Burger Name</label>
+    <input type="text" id="daburger" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="hungry">Devour?</label><br>
+    <input type="radio" name="yes" value="1" id="yes" checked> Yes!<br>
+    <input type="radio" name="no" value="0" id="no"> No
+  </div>
+
+  <button type="submit">Ready to devour!</button>
+</form>

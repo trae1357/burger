@@ -1,5 +1,15 @@
 const connection = require("./connection")
 
+const printQuestionMarks = (num) => {
+    const arr = [];
+  
+    for (let i = 0; i < num; i++) {
+      arr.push('?');
+    }
+  
+    return arr.toString();
+  };
+
 
 const orm = {
     selectAll:function(table,cbmodel){
@@ -8,5 +18,6 @@ const orm = {
         })
     }
 }
+
 
 module.exports = orm

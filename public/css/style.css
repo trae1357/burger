@@ -1,0 +1,31 @@
+li{
+    padding: 10px;
+    margin:10px;
+    background:black;
+}
+
+ul{
+    padding:10px;
+    margin:10px;
+    background:black
+}
+
+button{
+    color: white;
+}
+
+body{
+    background-color: orange;
+}
+
+p{
+    color: black;
+}
+h1{
+    color: black;
+}
+h2{
+    padding:10px;
+    margin:10px;
+    background: lightgrey;
+}
